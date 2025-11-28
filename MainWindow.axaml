@@ -1,0 +1,70 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="750"
+        x:Class="AvaloniaApp.MainWindow"
+        Title="Анкета"
+        Width="450" Height="750"
+        WindowStartupLocation="CenterScreen"
+        Background="#1e1e1e"> 
+
+    <ScrollViewer>
+        <StackPanel Margin="30" Spacing="15">
+            <TextBlock Text="Опрос пользователя" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20" Foreground="White"/>
+
+            <StackPanel Spacing="5">
+                <TextBlock Text="Фамилия:" Foreground="#cccccc"/>
+                <TextBox x:Name="SurnameBox" Watermark="Введите фамилию"/>
+            </StackPanel>
+
+            <StackPanel Spacing="5">
+                <TextBlock Text="Имя:" Foreground="#cccccc"/>
+                <TextBox x:Name="NameBox" Watermark="Введите имя"/>
+            </StackPanel>
+
+            <StackPanel Spacing="5">
+                <TextBlock Text="Отчество:" Foreground="#cccccc"/>
+                <TextBox x:Name="PatronymicBox" Watermark="Введите отчество"/>
+                <CheckBox x:Name="NoPatronymicCheck" Content="Нет отчества" Foreground="#aaaaaa"/>
+            </StackPanel>
+
+            <StackPanel Spacing="5">
+                 <Grid ColumnDefinitions="Auto, *">
+                    <TextBlock Grid.Column="0" Text="Возраст:" Foreground="#cccccc" VerticalAlignment="Center"/>
+                    <TextBlock Grid.Column="1" x:Name="AgeLabel" Text="18" Foreground="Cyan" FontWeight="Bold" HorizontalAlignment="Right"/>
+                </Grid>
+                <Slider x:Name="AgeSlider" Minimum="18" Maximum="100" Value="18" />
+            </StackPanel>
+            
+            <StackPanel Spacing="5">
+                <TextBlock Text="Номер телефона:" Foreground="#cccccc"/>
+                <TextBox x:Name="PhoneBox" Watermark="Напр: 5551234567" MaxLength="10"/>
+                <TextBlock x:Name="PhoneErrorText" Text="" Foreground="#ff5555" FontSize="12" IsVisible="False"/>
+            </StackPanel>
+
+            <StackPanel Spacing="5">
+                <TextBlock Text="Пол:" Foreground="#cccccc"/>
+                <StackPanel Orientation="Horizontal" Spacing="15">
+                    <RadioButton x:Name="MaleRadio" Content="Мужской" GroupName="Gender"/>
+                    <RadioButton x:Name="FemaleRadio" Content="Женский" GroupName="Gender"/>
+                    <RadioButton x:Name="OtherRadio" Content="Другое" GroupName="Gender"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Separator Margin="0,10" Opacity="0.5"/>
+
+            <CheckBox x:Name="ConsentSwitch" Content="Я согласен на обработку персональных данных" Foreground="White"/>
+            
+            <Button x:Name="SubmitButton" 
+                    Content="ОТПРАВИТЬ" 
+                    HorizontalAlignment="Stretch" 
+                    HorizontalContentAlignment="Center"
+                    Background="#007acc" 
+                    Foreground="White"
+                    FontWeight="Bold"
+                    Padding="10"
+                    IsEnabled="False"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
