@@ -20,6 +20,9 @@ This is a cross-platform desktop application developed using **C#** and **Avalon
 
 ## 📸 Screenshots
 
+<img width="311" height="316" alt="image" src="https://github.com/user-attachments/assets/e81be9f3-dcc6-4735-83c8-25ccf6287872" />
+<img width="456" height="789" alt="image" src="https://github.com/user-attachments/assets/a06f9f3b-0ad9-48bd-a7d0-497203de6c97" />
+<img width="451" height="786" alt="image" src="https://github.com/user-attachments/assets/6e28ebc0-770f-49d8-8778-83ed503558cf" />
 
 ## 📦 How to Run
 
